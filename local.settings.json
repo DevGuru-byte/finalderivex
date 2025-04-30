@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "DB_HOST":"181.224.136.39",
+    "DB_USER":"rainhope_admderivex",
+    "DB_PASSWORD":"rainhope_admderivex123!!",
+    "DB_NAME":"rainhope_dbderivex",
+    "JWT_SECRET":"secreto_super_seguro"
+  }
+}

@@ -1,0 +1,3176 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API pública de Negociación",
+    "version": "1.0.0",
+    "description": "Documentación automática generada con swagger-jsdoc"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/api/boletines_informativos/list": {
+      "get": {
+        "summary": "Obtener todos los boletines informativos",
+        "tags": [
+          "Boletines Informativos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de boletines"
+          }
+        }
+      }
+    },
+    "/api/boletines_informativos/create": {
+      "post": {
+        "summary": "Crear un nuevo boletín informativo",
+        "tags": [
+          "Boletines Informativos"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Boletín creado correctamente"
+          }
+        }
+      }
+    },
+    "/api/boletines_informativos/update/{id}": {
+      "put": {
+        "summary": "Actualizar un boletín informativo existente",
+        "tags": [
+          "Boletines Informativos"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del boletín"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Boletín actualizado correctamente"
+          }
+        }
+      }
+    },
+    "/api/boletines_informativos/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un boletín informativo",
+        "tags": [
+          "Boletines Informativos"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del boletín a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Boletín eliminado correctamente"
+          }
+        }
+      }
+    },
+    "/api/boletines_normativos/list": {
+      "get": {
+        "summary": "Obtener todos los boletines normativos",
+        "tags": [
+          "Boletines Normativos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de boletines"
+          }
+        }
+      }
+    },
+    "/api/boletines_normativos/create": {
+      "post": {
+        "summary": "Crear un nuevo boletín normativo",
+        "tags": [
+          "Boletines Normativos"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Boletín creado correctamente"
+          }
+        }
+      }
+    },
+    "/api/boletines_normativos/update/{id}": {
+      "put": {
+        "summary": "Actualizar un boletín normativo existente",
+        "tags": [
+          "Boletines Normativos"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del boletín"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Boletín actualizado correctamente"
+          }
+        }
+      }
+    },
+    "/api/boletines_normativos/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un boletín normativo",
+        "tags": [
+          "Boletines Normativos"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del boletín a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Boletín eliminado correctamente"
+          }
+        }
+      }
+    },
+    "/api/categoria_precio_cierre/list": {
+      "get": {
+        "summary": "Obtener todos los categoria de precios de cierre",
+        "tags": [
+          "Categoria Precio Cierre"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de categorias de precio de cierre"
+          }
+        }
+      }
+    },
+    "/api/categoria_precio_cierre/create": {
+      "post": {
+        "summary": "Crear una nueva categoria de precios de cierre",
+        "tags": [
+          "Categoria Precio Cierre"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "categoria"
+                ],
+                "properties": {
+                  "categoria": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Categoria de precio de cierre creado correctamente"
+          }
+        }
+      }
+    },
+    "/api/categoria_precio_cierre/update/{id}": {
+      "put": {
+        "summary": "Actualizar una categoria de precios de cierre existente",
+        "tags": [
+          "Categoria Precio Cierre"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la categoria de precio de cierre"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "categoria"
+                ],
+                "properties": {
+                  "categoria": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Categoria de precio de cierre actualizada correctamente"
+          }
+        }
+      }
+    },
+    "/api/categoria_precio_cierre/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar una categoria de precios de cierre",
+        "tags": [
+          "Categoria Precio Cierre"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la categoria de precio de cierre a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Categoria de precio de cierre eliminada correctamente"
+          }
+        }
+      }
+    },
+    "/api/historico_resultado_indicadores/list": {
+      "get": {
+        "summary": "Obtener todos los historico de resultados indicadores",
+        "tags": [
+          "Historico Resultados Indicadores"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de historico de resultados indicadores"
+          }
+        }
+      }
+    },
+    "/api/historico_resultado_indicadores/create": {
+      "post": {
+        "summary": "Crear un nuevo historico de resultados indicadores",
+        "tags": [
+          "Historico Resultados Indicadores"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Historico de resultados indicadores creado correctamente"
+          }
+        }
+      }
+    },
+    "/api/historico_resultado_indicadores/update/{id}": {
+      "put": {
+        "summary": "Actualizar un historico de resultados indicadores existente",
+        "tags": [
+          "Historico Resultados Indicadores"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del historico de resultados indicadores"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Historico de resultados indicadores actualizado correctamente"
+          }
+        }
+      }
+    },
+    "/api/historico_resultado_indicadores/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un historico de resultados indicadores",
+        "tags": [
+          "Historico Resultados Indicadores"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del historico de resultados indicadores a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Historico de resultados indicadores eliminado correctamente"
+          }
+        }
+      }
+    },
+    "/api/informe_mensual_derivex/list": {
+      "get": {
+        "summary": "Obtener todos los informes mensuales Derivex",
+        "tags": [
+          "Informe Mensual Derivex"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de informes mensuales Derivex"
+          }
+        }
+      }
+    },
+    "/api/informe_mensual_derivex/create": {
+      "post": {
+        "summary": "Crear un nuevo informe mensual Derivex",
+        "tags": [
+          "Informe Mensual Derivex"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Informe mensual Derivex creado correctamente"
+          }
+        }
+      }
+    },
+    "/api/informe_mensual_derivex/update/{id}": {
+      "put": {
+        "summary": "Actualizar un informe mensual Derivex existente",
+        "tags": [
+          "Informe Mensual Derivex"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del informe mensual Derivex"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Informe mensual Derivex actualizado correctamente"
+          }
+        }
+      }
+    },
+    "/api/informe_mensual_derivex/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un boletín informativo",
+        "tags": [
+          "Informe Mensual Derivex"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del informe mensual Derivex a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Informe mensual Derivex eliminado correctamente"
+          }
+        }
+      }
+    },
+    "/api/informe_mensual_miembros/list": {
+      "get": {
+        "summary": "Obtener todos los informes mensuales de miembros",
+        "tags": [
+          "Informe Mensual Miembros"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de informes mensuales de miembros"
+          }
+        }
+      }
+    },
+    "/api/informe_mensual_miembros/create": {
+      "post": {
+        "summary": "Crear un nuevo informe mensual de miembros",
+        "tags": [
+          "Informe Mensual Miembros"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Informe mensual de miembros creado correctamente"
+          }
+        }
+      }
+    },
+    "/api/informe_mensual_miembros/update/{id}": {
+      "put": {
+        "summary": "Actualizar un informe mensual de miembros",
+        "tags": [
+          "Informe Mensual Miembros"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del informe mensual de miembros"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Informe mensual de miembros actualizado correctamente"
+          }
+        }
+      }
+    },
+    "/api/informe_mensual_miembros/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un informe mensual de miembros",
+        "tags": [
+          "Informe Mensual Miembros"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del informe mensual de miembros a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Informe mensual de miembros eliminado correctamente"
+          }
+        }
+      }
+    },
+    "/api/informes_riesgos_operacional/list": {
+      "get": {
+        "summary": "Obtener todos los informes de riesgos operacionales",
+        "tags": [
+          "Informes Riesgos Operacional"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de informes de riesgos operacionales"
+          }
+        }
+      }
+    },
+    "/api/informes_riesgos_operacional/create": {
+      "post": {
+        "summary": "Crear un nuevo informe de riesgos operacionales",
+        "tags": [
+          "Informes Riesgos Operacional"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Informe de riesgos operacionales creado correctamente"
+          }
+        }
+      }
+    },
+    "/api/informes_riesgos_operacional/update/{id}": {
+      "put": {
+        "summary": "Actualizar un informe de riesgos operacionales existente",
+        "tags": [
+          "Informes Riesgos Operacional"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del informe de riesgos operacionales"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Informe de riesgos operacionales actualizado correctamente"
+          }
+        }
+      }
+    },
+    "/api/informes_riesgos_operacional/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un informe de riesgos operacionales",
+        "tags": [
+          "Informes Riesgos Operacional"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del informe de riesgos operacionales a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Informe de riesgos operacionales eliminado correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_electronica_diario/list": {
+      "get": {
+        "summary": "Obtener todas las negociaciones electronicas diarias",
+        "tags": [
+          "Negociación Electrónica Diaria"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de las negociaciones electronicas diarias"
+          }
+        }
+      }
+    },
+    "/api/negociacion_electronica_diario/create": {
+      "post": {
+        "summary": "Crear una nueva negociación electrónica diaria",
+        "tags": [
+          "Negociación Electrónica Diaria"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "contrato",
+                  "nemotecnico",
+                  "cantidad_energia_demanda",
+                  "mejor_demanda",
+                  "mejor_oferta",
+                  "cantidad_energia_oferta"
+                ],
+                "properties": {
+                  "contrato": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "nemotecnico": {
+                    "type": "string"
+                  },
+                  "cantidad_energia_demanda": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "mejor_demanda": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "mejor_oferta": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_energia_oferta": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Negociación electrónica diaria creada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_electronica_diario/update/{id}": {
+      "put": {
+        "summary": "Actualizar una negociación electrónica diaria existente",
+        "tags": [
+          "Negociación Electrónica Diaria"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la negociación electrónica diaria"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "contrato",
+                  "nemotecnico",
+                  "cantidad_energia_demanda",
+                  "mejor_demanda",
+                  "mejor_oferta",
+                  "cantidad_energia_oferta"
+                ],
+                "properties": {
+                  "contrato": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "nemotecnico": {
+                    "type": "string"
+                  },
+                  "cantidad_energia_demanda": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "mejor_demanda": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "mejor_oferta": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_energia_oferta": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Negociación Electrónica Diaria actualizada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_electronica_diario/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un  negociación electrónica diaria",
+        "tags": [
+          "Negociación Electrónica Diaria"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la negociación electrónica diaria a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Negociación Electrónica Diaria eliminada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_electronica_promedio/list": {
+      "get": {
+        "summary": "Obtener todas las negociaciones electronicas promedio",
+        "tags": [
+          "Negociación Electrónica Promedio"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de las negociaciones electronicas promedio"
+          }
+        }
+      }
+    },
+    "/api/negociacion_electronica_promedio/create": {
+      "post": {
+        "summary": "Crear una nueva negociación electrónica promedio",
+        "tags": [
+          "Negociación Electrónica Promedio"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "anno",
+                  "demanda",
+                  "oferta"
+                ],
+                "properties": {
+                  "anno": {
+                    "type": "string"
+                  },
+                  "demanda": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "oferta": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Negociación electrónica promedio creada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_electronica_promedio/update/{id}": {
+      "put": {
+        "summary": "Actualizar una negociación electrónica promedio existente",
+        "tags": [
+          "Negociación Electrónica Promedio"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la negociación electrónica promedio"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "anno",
+                  "demanda",
+                  "oferta"
+                ],
+                "properties": {
+                  "anno": {
+                    "type": "string"
+                  },
+                  "demanda": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "oferta": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Negociación Electrónica Promedio actualizada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_electronica_promedio/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un  negociación electrónica promedio",
+        "tags": [
+          "Negociación Electrónica Promedio"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la negociación electrónica promedio a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Negociación Electrónica Promedio eliminada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_electronica/list": {
+      "get": {
+        "summary": "Obtener todas las negociaciones electronicas",
+        "tags": [
+          "Negociación Electrónica"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de las negociaciones electronicas"
+          }
+        }
+      }
+    },
+    "/api/negociacion_electronica/create": {
+      "post": {
+        "summary": "Crear una nueva negociación electrónica",
+        "tags": [
+          "Negociación Electrónica"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "nemotecnico",
+                  "mejor_precio_compra",
+                  "cantidad_contratos_precio_compra",
+                  "mejor_precio_venta",
+                  "cantidad_contratos_precio_venta"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "nemotecnico": {
+                    "type": "string"
+                  },
+                  "mejor_precio_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_contratos_precio_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "mejor_precio_venta": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_contratos_precio_venta": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Negociación electrónica creada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_electronica/update/{id}": {
+      "put": {
+        "summary": "Actualizar una negociación electrónica existente",
+        "tags": [
+          "Negociación Electrónica"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la negociación electrónica"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "nemotecnico",
+                  "mejor_precio_compra",
+                  "cantidad_contratos_precio_compra",
+                  "mejor_precio_venta",
+                  "cantidad_contratos_precio_venta"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "nemotecnico": {
+                    "type": "string"
+                  },
+                  "mejor_precio_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_contratos_precio_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "mejor_precio_venta": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_contratos_precio_venta": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Negociación Electrónica actualizada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_electronica/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un  negociación electrónica",
+        "tags": [
+          "Negociación Electrónica"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la negociación electrónica a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Negociación Electrónica eliminada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_mixta_diario/list": {
+      "get": {
+        "summary": "Obtener todas las negociaciones mixtas diarias",
+        "tags": [
+          "Negociación Mixta Diaria"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de las negociaciones mixtas diarias"
+          }
+        }
+      }
+    },
+    "/api/negociacion_mixta_diario/create": {
+      "post": {
+        "summary": "Crear una nueva negociación mixta diaria",
+        "tags": [
+          "Negociación Mixta Diaria"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "nemotecnico",
+                  "mejor_precio_compra",
+                  "cantidad_contratos_precio_compra",
+                  "mejor_precio_venta",
+                  "cantidad_contratos_precio_venta"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "nemotecnico": {
+                    "type": "string"
+                  },
+                  "mejor_precio_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_contratos_precio_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "mejor_precio_venta": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_contratos_precio_venta": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Negociación Mixta Diaria creada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_mixta_diario/update/{id}": {
+      "put": {
+        "summary": "Actualizar una negociación mixta diaria existente",
+        "tags": [
+          "Negociación Mixta Diaria"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la negociación mixta diaria"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "nemotecnico",
+                  "mejor_precio_compra",
+                  "cantidad_contratos_precio_compra",
+                  "mejor_precio_venta",
+                  "cantidad_contratos_precio_venta"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "nemotecnico": {
+                    "type": "string"
+                  },
+                  "mejor_precio_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_contratos_precio_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "mejor_precio_venta": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_contratos_precio_venta": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Negociación Mixta Diaria actualizada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_mixta_diario/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un  negociación mixta diaria",
+        "tags": [
+          "Negociación Mixta Diaria"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la negociación mixta diaria a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Negociación Mixta Diaria eliminada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_mixta/list": {
+      "get": {
+        "summary": "Obtener todas las negociaciones mixtas",
+        "tags": [
+          "Negociación Mixta"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de las negociaciones mixtas"
+          }
+        }
+      }
+    },
+    "/api/negociacion_mixta/create": {
+      "post": {
+        "summary": "Crear una nueva negociación mixta",
+        "tags": [
+          "Negociación Mixta"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "nemotecnico",
+                  "mejor_precio_compra",
+                  "cantidad_contratos_precio_compra",
+                  "mejor_precio_venta",
+                  "cantidad_contratos_precio_venta"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "nemotecnico": {
+                    "type": "string"
+                  },
+                  "mejor_precio_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_contratos_precio_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "mejor_precio_venta": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_contratos_precio_venta": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Negociación Mixta creada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_mixta/update/{id}": {
+      "put": {
+        "summary": "Actualizar una negociación mixta existente",
+        "tags": [
+          "Negociación Mixta"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la negociación mixta"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "nemotecnico",
+                  "mejor_precio_compra",
+                  "cantidad_contratos_precio_compra",
+                  "mejor_precio_venta",
+                  "cantidad_contratos_precio_venta"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "nemotecnico": {
+                    "type": "string"
+                  },
+                  "mejor_precio_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_contratos_precio_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "mejor_precio_venta": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_contratos_precio_venta": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Negociación Mixta actualizada correctamente"
+          }
+        }
+      }
+    },
+    "/api/negociacion_mixta/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un  negociación mixta",
+        "tags": [
+          "Negociación Mixta"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la negociación mixta a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Negociación Mixta eliminada correctamente"
+          }
+        }
+      }
+    },
+    "/api/normatividad_mercado/list": {
+      "get": {
+        "summary": "Obtener todos las normativas de mercado",
+        "tags": [
+          "Normatividad Mercado"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de normativas de mercado"
+          }
+        }
+      }
+    },
+    "/api/normatividad_mercado/create": {
+      "post": {
+        "summary": "Crear una nueva normativa de mercado",
+        "tags": [
+          "Normatividad Mercado"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Normativa de mercado creado correctamente"
+          }
+        }
+      }
+    },
+    "/api/normatividad_mercado/update/{id}": {
+      "put": {
+        "summary": "Actualizar una normativa de mercado existente",
+        "tags": [
+          "Normatividad Mercado"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la normativa de mercado"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Normativa de mercado actualizada correctamente"
+          }
+        }
+      }
+    },
+    "/api/normatividad_mercado/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar una normativa de mercado",
+        "tags": [
+          "Normatividad Mercado"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la normativa de mercado a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Normativa de mercado eliminada correctamente"
+          }
+        }
+      }
+    },
+    "/api/precio_bolsa/list": {
+      "get": {
+        "summary": "Obtener todos los precios de la bolsa",
+        "tags": [
+          "Precios Bolsa"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de precios de la bolsa"
+          }
+        }
+      }
+    },
+    "/api/precio_bolsa/create": {
+      "post": {
+        "summary": "Crear un nuevo precio de bolsa",
+        "tags": [
+          "Precios Bolsa"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Precio de bolsa creado correctamente"
+          }
+        }
+      }
+    },
+    "/api/precio_bolsa/update/{id}": {
+      "put": {
+        "summary": "Actualizar un precio de bolsa existente",
+        "tags": [
+          "Precios Bolsa"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del precio de bolsa"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Precio de bolsa actualizado correctamente"
+          }
+        }
+      }
+    },
+    "/api/precio_bolsa/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un precio de bolsa",
+        "tags": [
+          "Precios Bolsa"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID del precio de bolsa a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Precio de bolsa eliminado correctamente"
+          }
+        }
+      }
+    },
+    "/api/precio_cierre/list": {
+      "get": {
+        "summary": "Obtener todos los precios de cierre",
+        "tags": [
+          "Precio Cierre"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de precios de cierre"
+          }
+        }
+      }
+    },
+    "/api/precio_cierre/create": {
+      "post": {
+        "summary": "Crear un nuevo precio de cierre",
+        "tags": [
+          "Precio Cierre"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "id_categoria_precio_cierre",
+                  "categoria_cierre"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "id_categoria_precio_cierre": {
+                    "type": "integer",
+                    "description": "ID de la categoría (llave foránea)"
+                  },
+                  "categoria_cierre": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Precio de cierre creado correctamente"
+          }
+        }
+      }
+    },
+    "/api/precio_cierre/update/{id}": {
+      "put": {
+        "summary": "Actualizar un precio de cierre existente",
+        "tags": [
+          "Precio Cierre"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "ID del precio de cierre"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "id_categoria_precio_cierre",
+                  "categoria_cierre"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "id_categoria_precio_cierre": {
+                    "type": "integer",
+                    "description": "ID de la categoría (llave foránea)"
+                  },
+                  "categoria_cierre": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Precio de cierre actualizado correctamente"
+          }
+        }
+      }
+    },
+    "/api/precio_cierre/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un precio de cierre",
+        "tags": [
+          "Precio Cierre"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "ID del precio de cierre a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Precio de cierre eliminado correctamente"
+          }
+        }
+      }
+    },
+    "/api/precios_convocatorias_subasta_cierre/list": {
+      "get": {
+        "summary": "Obtener todos los precios de subasta de cierre",
+        "tags": [
+          "Precios Subasta Cierre"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de precios de subasta de cierre"
+          }
+        }
+      }
+    },
+    "/api/precios_convocatorias_subasta_cierre/create": {
+      "post": {
+        "summary": "Crear un nuevo precio de subasta de cierre",
+        "tags": [
+          "Precios Subasta Cierre"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha_convocatoria",
+                  "nemotecnico",
+                  "contrato",
+                  "precio_referencia"
+                ],
+                "properties": {
+                  "fecha_convocatoria": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "nemotecnico": {
+                    "type": "string"
+                  },
+                  "contrato": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "precio_referencia": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Precio de subasta de cierre creado correctamente"
+          }
+        }
+      }
+    },
+    "/api/precios_convocatorias_subasta_cierre/update/{id}": {
+      "put": {
+        "summary": "Actualizar un precio de subasta de cierre existente",
+        "tags": [
+          "Precios Subasta Cierre"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "ID del precio de subasta de cierre"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha_convocatoria",
+                  "nemotecnico",
+                  "contrato",
+                  "precio_referencia"
+                ],
+                "properties": {
+                  "fecha_convocatoria": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "nemotecnico": {
+                    "type": "string"
+                  },
+                  "contrato": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "precio_referencia": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Precio de subasta de cierre actualizado correctamente"
+          }
+        }
+      }
+    },
+    "/api/precios_convocatorias_subasta_cierre/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un precio de subasta de cierre",
+        "tags": [
+          "Precios Subasta Cierre"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "ID del precio de subasta de cierre a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Precio de subasta de cierre eliminado correctamente"
+          }
+        }
+      }
+    },
+    "/api/regulacion_aplicable/list": {
+      "get": {
+        "summary": "Obtener todas las regulaciones aplicables",
+        "tags": [
+          "Regulacion Aplicable"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de regulaciones aplicables"
+          }
+        }
+      }
+    },
+    "/api/regulacion_aplicable/create": {
+      "post": {
+        "summary": "Crear una nueva regulación aplicable",
+        "tags": [
+          "Regulacion Aplicable"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Regulación aplicable creada correctamente"
+          }
+        }
+      }
+    },
+    "/api/regulacion_aplicable/update/{id}": {
+      "put": {
+        "summary": "Actualizar una regulación aplicable existente",
+        "tags": [
+          "Regulacion Aplicable"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la regulación aplicable"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Regulación aplicable actualizada correctamente"
+          }
+        }
+      }
+    },
+    "/api/regulacion_aplicable/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar una regulación aplicable",
+        "tags": [
+          "Regulacion Aplicable"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la regulación aplicable a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Regulación aplicable eliminado correctamente"
+          }
+        }
+      }
+    },
+    "/api/regulacion_mercado_anonimo/list": {
+      "get": {
+        "summary": "Obtener todas las regulaciones de mercado anonimo",
+        "tags": [
+          "Regulación Mercado Anonimo"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de regulaciones de mercado anonimo"
+          }
+        }
+      }
+    },
+    "/api/regulacion_mercado_anonimo/create": {
+      "post": {
+        "summary": "Crear una nueva regulación de mercado anonimo",
+        "tags": [
+          "Regulación Mercado Anonimo"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Regulación de mercado anonimo creada correctamente"
+          }
+        }
+      }
+    },
+    "/api/regulacion_mercado_anonimo/update/{id}": {
+      "put": {
+        "summary": "Actualizar una regulación de mercado anonimo existente",
+        "tags": [
+          "Regulación Mercado Anonimo"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la regulación de mercado anonimo"
+          }
+        ],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "titulo",
+                  "descripcion",
+                  "documento_pdf"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "documento_pdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Regulación de mercado anonimo actualizada correctamente"
+          }
+        }
+      }
+    },
+    "/api/regulacion_mercado_anonimo/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar una regulación de mercado anonimo",
+        "tags": [
+          "Regulación Mercado Anonimo"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID de la regulación de mercado anonima a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Regulación de mercado anonimo eliminada correctamente"
+          }
+        }
+      }
+    },
+    "/api/resultados_convocatorias/list": {
+      "get": {
+        "summary": "Obtener todos los resultados de convocatorias",
+        "tags": [
+          "Resultados Convocatorias"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de resultados de convocatorias"
+          }
+        }
+      }
+    },
+    "/api/resultados_convocatorias/create": {
+      "post": {
+        "summary": "Crear un nuevo resultado de convocatoria",
+        "tags": [
+          "Resultados Convocatorias"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha_convocatoria",
+                  "nemotecnico",
+                  "contrato",
+                  "precio_adjudicado",
+                  "cantidad_energia_adjudicada",
+                  "cantidad_energia_expuesta_compra",
+                  "cantidad_energia_expuesta_venta"
+                ],
+                "properties": {
+                  "fecha_convocatoria": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "nemotecnico": {
+                    "type": "string"
+                  },
+                  "contrato": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "precio_adjudicado": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_energia_adjudicada": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_energia_expuesta_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_energia_expuesta_venta": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Resultado de convocatoria creado correctamente"
+          }
+        }
+      }
+    },
+    "/api/resultados_convocatorias/update/{id}": {
+      "put": {
+        "summary": "Actualizar un resultado de convocatoria existente",
+        "tags": [
+          "Resultados Convocatorias"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "ID del resultado de convocatoria"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha_convocatoria",
+                  "nemotecnico",
+                  "contrato",
+                  "precio_adjudicado",
+                  "cantidad_energia_adjudicada",
+                  "cantidad_energia_expuesta_compra",
+                  "cantidad_energia_expuesta_venta"
+                ],
+                "properties": {
+                  "fecha_convocatoria": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "nemotecnico": {
+                    "type": "string"
+                  },
+                  "contrato": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "precio_adjudicado": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_energia_adjudicada": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_energia_expuesta_compra": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad_energia_expuesta_venta": {
+                    "type": "number",
+                    "format": "float"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resultado de convocatoria actualizado correctamente"
+          }
+        }
+      }
+    },
+    "/api/resultados_convocatorias/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un resultado de convocatoria",
+        "tags": [
+          "Resultados Convocatorias"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "ID del resultado de convocatoria a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resultado de convocatoria eliminado correctamente"
+          }
+        }
+      }
+    },
+    "/api/ultimas_transacciones/list": {
+      "get": {
+        "summary": "Obtener todas las últimas transacciones",
+        "tags": [
+          "Últimas Transacciones"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de transacciones"
+          }
+        }
+      }
+    },
+    "/api/ultimas_transacciones/create": {
+      "post": {
+        "summary": "Crear una nueva transacción",
+        "tags": [
+          "Últimas Transacciones"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "instrumento",
+                  "contrato",
+                  "mes_contrato",
+                  "precio",
+                  "cantidad",
+                  "monto",
+                  "carga_total",
+                  "sesion_negociacion"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "instrumento": {
+                    "type": "string"
+                  },
+                  "contrato": {
+                    "type": "string"
+                  },
+                  "mes_contrato": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "precio": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "monto": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "carga_total": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "sesion_negociacion": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Transacción creada correctamente"
+          }
+        }
+      }
+    },
+    "/api/ultimas_transacciones/update/{id}": {
+      "put": {
+        "summary": "Actualizar una transacción existente",
+        "tags": [
+          "Últimas Transacciones"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "ID de la transacción a actualizar"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fecha",
+                  "instrumento",
+                  "contrato",
+                  "mes_contrato",
+                  "precio",
+                  "cantidad",
+                  "monto",
+                  "carga_total",
+                  "sesion_negociacion"
+                ],
+                "properties": {
+                  "fecha": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "instrumento": {
+                    "type": "string"
+                  },
+                  "contrato": {
+                    "type": "string"
+                  },
+                  "mes_contrato": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "precio": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "cantidad": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "monto": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "carga_total": {
+                    "type": "number",
+                    "format": "float"
+                  },
+                  "sesion_negociacion": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Transacción actualizada correctamente"
+          }
+        }
+      }
+    },
+    "/api/ultimas_transacciones/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar una transacción",
+        "tags": [
+          "Últimas Transacciones"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "ID de la transacción a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Transacción eliminada correctamente"
+          }
+        }
+      }
+    },
+    "/api/usuario/register": {
+      "post": {
+        "summary": "Registrar un nuevo usuario",
+        "tags": [
+          "Usuarios"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "nombre",
+                  "email",
+                  "password"
+                ],
+                "properties": {
+                  "nombre": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "password": {
+                    "type": "string",
+                    "format": "password"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Usuario registrado correctamente"
+          }
+        }
+      }
+    },
+    "/api/usuario/login": {
+      "post": {
+        "summary": "Iniciar sesión de usuario",
+        "tags": [
+          "Usuarios"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "email",
+                  "password"
+                ],
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "password": {
+                    "type": "string",
+                    "format": "password"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sesión iniciada correctamente"
+          }
+        }
+      }
+    },
+    "/api/usuario/list": {
+      "get": {
+        "summary": "Obtener la lista de usuarios",
+        "tags": [
+          "Usuarios"
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de usuarios"
+          }
+        }
+      }
+    },
+    "/api/usuario/{id}": {
+      "get": {
+        "summary": "Obtener un usuario por ID",
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "ID del usuario"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Datos del usuario"
+          }
+        }
+      }
+    },
+    "/api/usuario/update/{id}": {
+      "put": {
+        "summary": "Actualizar un usuario",
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "ID del usuario a actualizar"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nombre": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "password": {
+                    "type": "string",
+                    "format": "password"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Usuario actualizado correctamente"
+          }
+        }
+      }
+    },
+    "/api/usuario/delete/{id}": {
+      "delete": {
+        "summary": "Eliminar un usuario",
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true,
+            "description": "ID del usuario a eliminar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Usuario eliminado correctamente"
+          }
+        }
+      }
+    }
+  },
+  "components": {},
+  "tags": [
+    {
+      "name": "Boletines Informativos",
+      "description": "Gestión de boletines informativos"
+    },
+    {
+      "name": "Boletines Normativos",
+      "description": "Gestión de boletines normativos"
+    },
+    {
+      "name": "Categoria Precio Cierre",
+      "description": "Gestión de categoria de precios de cierre"
+    },
+    {
+      "name": "Historico Resultados Indicadores",
+      "description": "Gestión de historico de resultados indicadores"
+    },
+    {
+      "name": "Informe Mensual Derivex",
+      "description": "Gestión de informe mensual Derivex"
+    },
+    {
+      "name": "Informe Mensual Miembros",
+      "description": "Gestión de informes mensuales de miembros"
+    },
+    {
+      "name": "Informes Riesgos Operacional",
+      "description": "Gestión de informes de riesgos operacionales"
+    },
+    {
+      "name": "Negociación Electrónica Diaria",
+      "description": "Gestión de negociación electrónica diaria"
+    },
+    {
+      "name": "Negociación Electrónica Promedio",
+      "description": "Gestión de negociación electrónica promedio"
+    },
+    {
+      "name": "Negociación Electrónica",
+      "description": "Gestión de negociación electrónica"
+    },
+    {
+      "name": "Negociación Mixta Diaria",
+      "description": "Gestión de negociación mixta diaria"
+    },
+    {
+      "name": "Negociación Mixta",
+      "description": "Gestión de negociación mixta"
+    },
+    {
+      "name": "Normatividad Mercado",
+      "description": "Gestión de Normatividad de Mercado"
+    },
+    {
+      "name": "Precios Bolsa",
+      "description": "Gestión de precios de la bolsa"
+    },
+    {
+      "name": "Precio Cierre",
+      "description": "Gestión de precios de cierre"
+    },
+    {
+      "name": "Precios Subasta Cierre",
+      "description": "Gestión de precios de subasta de cierre"
+    },
+    {
+      "name": "Regulacion Aplicable",
+      "description": "Gestión de regulaciones aplicables"
+    },
+    {
+      "name": "Regulación Mercado Anonimo",
+      "description": "Gestión de regulaciones de mercado anonimo"
+    },
+    {
+      "name": "Resultados Convocatorias",
+      "description": "Gestión de resultados de convocatorias"
+    },
+    {
+      "name": "Últimas Transacciones",
+      "description": "Gestión de las últimas transacciones registradas"
+    },
+    {
+      "name": "Usuarios",
+      "description": "Gestión de usuarios (registro, autenticación y administración)"
+    }
+  ]
+}
